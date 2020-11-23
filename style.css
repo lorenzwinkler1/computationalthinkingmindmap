@@ -1,0 +1,58 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+#jsmind-container {
+  height: 100%;
+  width: 100%;
+}
+.details {
+  max-width: 420px;
+  /* width: 400px; */
+  white-space: normal;
+  margin:0px;
+  padding:10px;
+}
+.details > h3{
+  margin-top:0px;
+}
+
+.detailswimage {
+  width: 400px;
+}
+.blacktransparent{
+background-color: rgba(0, 0, 0, 0.6);
+color:white;
+}
+.blacktransparent > a{
+  color:white;
+}
+.legend {
+  position: fixed;
+  left: 0;
+  bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  font-size: 13pt;
+  user-select: none;
+}
+.legendentry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.legendentrybox {
+  width: 20px;
+  height: 12px;
+  margin: 4px;
+  border: 1px solid black;
+}
+.legendentrybox-lightblue {
+  background-color: lightblue;
+}
+.legendentrybox-lightgreen {
+  background-color: lightgreen;
+}
