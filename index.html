@@ -49,7 +49,7 @@
             {
                 "id": "root", "isroot": true, "topic": "Computational Thinking", children: [
                     {
-                        "id": "whatisst_toggle", "topic": "What is computational thinking?", "background-color": "lightblue", direction: "left", children: [
+                        "id": "whatisst_toggle", expanded: false, "topic": "What is computational thinking?", "background-color": "lightblue", direction: "left", children: [
                             {
                                 "id": "twoa_toggle", expanded: false, "isroot": false, "topic": "Two A's", "background-color": "lightblue", direction: "left", children: [
                                     {
@@ -82,21 +82,31 @@
                         ]
                     },
                     {
-                        "id": "idea_of_programming_toggle", "topic": "The idea of programming", "background-color": "lightblue", direction: "left", children: [
+                        "id": "idea_of_programming_toggle", expanded: false, direction:"right", "topic": "The idea of programming", "background-color": "lightblue", children: [
                             {
-                                "id": "idea_of_programming_history_toggle", "topic": "History of computers", "background-color": "lightblue", children: [
-                                    { "id": "idea_history_difference_engine_details", topic: "Chargles Babbage / difference engine", "background-color":"lightgreen" },
-                                    { "id": "idea_history_analytical_engine_details", topic: "Chargles Babbage / analytical engine", "background-color":"lightgreen" },
-                                    { "id": "idea_history_enigma_details", topic: "Enigma", "background-color":"lightgreen" },
-                                    { "id": "idea_history_eniac_details", topic: "ENIAC", "background-color":"lightgreen" },
-                                    { "id": "idea_history_computer_tree_details", topic: "Computer tree", "background-color":"lightgreen" }
+                                "id": "idea_of_programming_history_toggle",expanded:false, "topic": "History of computers", "background-color": "lightblue", children: [
+                                    { "id": "idea_history_difference_engine_details", topic: "Chargles Babbage / difference engine", "background-color": "lightgreen" },
+                                    { "id": "idea_history_analytical_engine_details", topic: "Chargles Babbage / analytical engine", "background-color": "lightgreen" },
+                                    { "id": "idea_history_enigma_details", topic: "Enigma", "background-color": "lightgreen" },
+                                    { "id": "idea_history_eniac_details", topic: "ENIAC", "background-color": "lightgreen" },
                                 ]
                             },
                             {
-                                "id":"idea_programming_toggle", direction:"right", "background-color":"lightblue", topic:"Software", children:[
-                                    {"id":"idea_writing_software_details","topic":"\"writing\" software", topic:""}
+                                "id": "idea_programming_toggle", direction: "right", expanded:false, "background-color": "lightblue", topic: "Software", children: [
+                                    { "id": "idea_writing_software_details", "topic": "\"writing\" software", "background-color": "lightgreen" },
+                                    { "id": "idea_building_software_details", "topic": "\"building\" software", "background-color": "lightgreen" },
+                                    { "id": "idea_growing_software_details", "topic": "\"growing\" software", "background-color": "lightgreen" }
                                 ]
                             }
+                        ]
+                    },
+                    {
+                        "id": "principles_of_algorithmic_thinking_toggle", expanded: false, "topic": "The five principles <br>of algorithmic thinking", "background-color": "lightblue", direction: "right", children: [
+                            {"id": "idea_alg_specification_details", expanded:false, "topic": "Specification", "background-color": "lightgreen"},
+                            {"id": "idea_alg_decomposition_details", expanded:false, "topic": "Decomposition", "background-color": "lightgreen"},
+                            {"id": "idea_alg_abstraction_details", expanded:false, "topic": "Abstraction", "background-color": "lightgreen"},
+                            {"id": "idea_alg_scalability_details", expanded:false, "topic": "Scalability", "background-color": "lightgreen"},
+                            {"id": "idea_alg_reduction_details", expanded:false, "topic": "Reduction", "background-color": "lightgreen"}
                         ]
                     }
                 ]
@@ -123,7 +133,22 @@
             "computing_revolutioins_methodological_details",
             "computing_revolutioins_epistemological_details",
             "computing_revolutioins_ontological_details",
-            "computing_revolutioins_sociotechnical_details"
+            "computing_revolutioins_sociotechnical_details",
+
+            "idea_history_difference_engine_details",
+            "idea_history_analytical_engine_details",
+            "idea_history_enigma_details",
+            "idea_history_eniac_details",
+
+            "idea_writing_software_details",
+            "idea_building_software_details",
+            "idea_growing_software_details",
+
+            "idea_alg_specification_details",
+            "idea_alg_decomposition_details",
+            "idea_alg_abstraction_details",
+            "idea_alg_scalability_details",
+            "idea_alg_reduction_details"
         ]
         var datablobswithdetails = {
             "twoa_abstraction_details": {
@@ -275,7 +300,215 @@ Finding new ways of communication.
                     <a class="src" href="https://aurora.iguw.tuwien.ac.at/course/dwi/slides/Chapter_Computational%20Thinking/was-ist-computational-thinking/">[Aurora am 23.11.2020]</a>
                     </div>`,
                 background: ""
+            },
 
+
+            "idea_history_difference_engine_details": {
+                topic: "the difference engine",
+                details: `<div class="details blacktransparent">
+                    <h3>the difference engine</h3>
+                    <p>
+Chargles Babbage built the difference engine, which was basical a very advanced "calculation machine".
+                 </p>
+                    <p>
+                    Purpose of this machine was the calculation of logarithmic-tables, which could be approximated through power series.
+                  </p>
+                    <p>
+                    </p>
+                    <a class="src" href="https://aurora.iguw.tuwien.ac.at/course/dwi/slides/Chapter_Computational%20Thinking/was-ist-computational-thinking/">[Aurora am 23.11.2020]</a>
+                    </div>`,
+                background: ""
+            },
+            "idea_history_analytical_engine_details": {
+                topic: "the analytic engine",
+                details: `<div class="details blacktransparent">
+                    <h3>the analytic engine</h3>
+                    <p>
+The analytic engine did only exist as a concept, and it was not possible to build it at its time (for example due to heat).
+                 </p>
+                    <p>
+                    While it did never exist, it still is called "the oldest computer". Its concept is amazing, considering the circumstances. 
+                    </p>
+                    <p>
+                    There are efforts to build that machine now.
+                    </p>
+                    <p>
+                    The first \"programs\" for that machine (which were basically the first programs at all) were written by Ada Lovelance and did for example calculate the bernoulli-numbers.
+                    </p>
+                    <a class="src" href="https://aurora.iguw.tuwien.ac.at/course/dwi/slides/Chapter_Computational%20Thinking/was-ist-computational-thinking/">[Aurora am 23.11.2020]</a>
+                    </div>`,
+                background: ""
+            },
+            "idea_history_enigma_details": {
+                topic: "Enigma",
+                details: `<div class="details blacktransparent">
+                    <h3>Enigma</h3>
+                    <p>
+The Enigma was developed by the germans during World War 2. It was used to encrypt all messages. Decrypting it was very time intensive, and could not be done in time, so that the message was still to be used.
+                 </p>
+                    <p>
+The allies, under the lead of Alan Turing were able to build a machine, called "bomb", which was able to decrypt messages very fast. 
+                      </p>
+                    <p>
+                    <h4>Important sidenote</h4>
+                    Alan Turing commited suicide, after he was sentenced to take hormon pills, because he was homosexual, to cure that \"disease\". <br>
+It is sad, how at one point, someone helps to save the world, and afterwards that very same person is driven into suicide, for a \"crime\", which should not be one.
+                    </p>
+                    <p>
+It took until about 60 years after Turing's death, until the british queen spoke out a royal pardon for Turing.
+</p>
+<p>
+I would recommend watching <a class="src" href="https://www.imdb.com/title/tt2084970/">The imitation game</a>. While not being a hundred percent accurate about how the creation of "the bomb" was carried out, it still tells Turing's story in a very good way and adresses the - unfortunately - still very present topic of homophobia. 
+                    </p>
+                    <a class="src" href="https://aurora.iguw.tuwien.ac.at/course/dwi/slides/Chapter_Computational%20Thinking/was-ist-computational-thinking/">[Aurora am 23.11.2020]</a>
+               <a class="src" href="https://en.wikipedia.org/wiki/Alan_Turing">[Wikipedia am 23.11.2020]</a>
+                 </div>`,
+                background: "assets/enigma.jpg"
+            },
+            "idea_history_eniac_details": {
+                topic: "ENIAC",
+                details: `<div class="details blacktransparent">
+                    <h3>ENIAC</h3>
+                    <p>
+Eniac was the first computer, which made for "general purpose", and was, in contrast to the analytic engine, in fact built.
+                 </p>
+                    <p>
+                    It was built for the military, and was initially planned to be made for "special purpose", but they decided to build a more videly usable version.
+                  </p>
+                    <p>
+                    </p>
+                    <a class="src" href="https://aurora.iguw.tuwien.ac.at/course/dwi/slides/Chapter_Computational%20Thinking/was-ist-computational-thinking/">[Aurora am 23.11.2020]</a>
+                    </div>`,
+                background: ""
+            },
+
+            "idea_writing_software_details": {
+                topic: "\"Writing\" software",
+                details: `<div class="details blacktransparent">
+                    <h3>\"Writing\" software</h3>
+                    <p>
+When programming at the time of the analytic engine, one spoke about "writing" software. It was somehow more comparable to a story, than code is nowadays.
+</p>
+                    <p>
+                      </p>
+                    <p>
+                    </p>
+                    <a class="src" href="https://aurora.iguw.tuwien.ac.at/course/dwi/slides/Chapter_Computational%20Thinking/was-ist-computational-thinking/">[Aurora am 23.11.2020]</a>
+                    </div>`,
+                background: ""
+            },
+            "idea_building_software_details": {
+                topic: "\"Building\" software",
+                details: `<div class="details blacktransparent">
+                    <h3>\"Building\" software</h3>
+                    <p>
+Software nowadays is no longer written, like a story, but more constructed, like a building. It has different layers, and some known patterns are used.
+                    </p>
+                    <p>
+
+                    </p>
+                    <p>
+                    </p>
+                    <a class="src" href="https://aurora.iguw.tuwien.ac.at/course/dwi/slides/Chapter_Computational%20Thinking/was-ist-computational-thinking/">[Aurora am 23.11.2020]</a>
+                    </div>`,
+                background: ""
+            },
+            "idea_history_eniac_details": {
+                topic: "\"growing\" software",
+                details: `<div class="details blacktransparent">
+                    <h3>\"growing\" software</h3>
+                    <p>
+A software's quality takes advantage of not just seing programming as building something, but taking the process of code creation serios.
+                  </p>
+                    <p>
+
+                    </p>
+                    <p>
+                    </p>
+                    <a class="src" href="https://aurora.iguw.tuwien.ac.at/course/dwi/slides/Chapter_Computational%20Thinking/was-ist-computational-thinking/">[Aurora am 23.11.2020]</a>
+                    </div>`,
+                background: ""
+            },
+
+
+            "idea_alg_specification_details": {
+                topic: "Specification",
+                details: `<div class="details blacktransparent">
+                    <h3>Specification</h3>
+                    <p>
+The specification of code means, that it is clear, what input and output are and what their correlation is. 
+                 </p>
+                    <p>
+For example, the specification of a function, which multiplies two numbers is, that it receives two numbers, and returns a number, which is the product of the two given numbers.
+                    </p>
+                    <p>
+                    </p>
+                    <a class="src" href="https://aurora.iguw.tuwien.ac.at/course/dwi/slides/Chapter_Computational%20Thinking/was-ist-computational-thinking/">[Aurora am 23.11.2020]</a>
+                    </div>`,
+                background: ""
+            },
+            "idea_alg_decomposition_details": {
+                topic: "Decomposition",
+                details: `<div class="details blacktransparent">
+                    <h3>Decomposition</h3>
+                    <p>
+Complex problems are seperated into many smaller problems. 
+                 </p>
+                    <p>
+                    The advantage of this approach is, that the smaller solutions can be tested more easily, and can also be implemented by different people, to save time.
+                 </p>
+                    <p>
+                    </p>
+                    <a class="src" href="https://aurora.iguw.tuwien.ac.at/course/dwi/slides/Chapter_Computational%20Thinking/was-ist-computational-thinking/">[Aurora am 23.11.2020]</a>
+                    </div>`,
+                background: ""
+            },
+            "idea_alg_abstraction_details": {
+                topic: "Abstraction",
+                details: `<div class="details blacktransparent">
+                    <h3>Abstraction</h3>
+                    <p>
+Using abstraction it is possible, to build complex systems. There are lots of abstraction layers between the algorithms and the translation for the hardware. [Aurora]
+                 </p>
+                    <p>
+                     </p>
+                    <p>
+                    </p>
+                    <a class="src" href="https://aurora.iguw.tuwien.ac.at/course/dwi/slides/Chapter_Computational%20Thinking/was-ist-computational-thinking/">[Aurora am 23.11.2020]</a>
+                    </div>`,
+                background: ""
+            },
+            "idea_alg_scalability_details": {
+                topic: "Scalability",
+                details: `<div class="details blacktransparent">
+                    <h3>Scalability</h3>
+                    <p>
+When using lots of data, and performing algorithms a lot, the efficacy of those algorithms is crucial for the software.
+                 </p>
+                    <p>
+                    An experiment has shown, that using new algorithms on old hardware can be compared, in terms of speed, to using old algorithms on new hardware. <br>
+                    This shows, that improving algorithms is very important, in terms of performance. [Aurora]
+                     </p>
+                    <p>
+                    </p>
+                    <a class="src" href="https://aurora.iguw.tuwien.ac.at/course/dwi/slides/Chapter_Computational%20Thinking/was-ist-computational-thinking/">[Aurora am 23.11.2020]</a>
+                    </div>`,
+                background: ""
+            },
+            "idea_alg_reduction_details": {
+                topic: "Reduction",
+                details: `<div class="details blacktransparent">
+                    <h3>Reduction</h3>
+                    <p>
+                        A problem can be compared to known problems, to either use solutions of known problems, or to proofe, that the complexity of the problem is at least as severe, as the complexity of the known problem.
+                    </p>
+                    <p>
+                    </p>
+                    <p>
+                    </p>
+                    <a class="src" href="https://aurora.iguw.tuwien.ac.at/course/dwi/slides/Chapter_Computational%20Thinking/was-ist-computational-thinking/">[Aurora am 23.11.2020]</a>
+                    </div>`,
+                background: ""
             },
         }
 
